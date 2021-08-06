@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Wolfram|Alpha: Examples by Topic</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="synonyms" content="wolfram alpha, alpha" />
+
+<meta name="google-site-verification" content="mE2MwXYWZdTRA6VgPRWefX10WVDza-PcEBsywQgtM2s" />
+<meta name="msvalidate.01" content="C8DF0015EE38FC5B84FA0F36AFFAF874" />
+
+<!--[if IE]>
+<meta name="msapplication-config" content="/browserconfig.xml?_v=1470063461">
+<![endif]-->
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:300|Source+Sans+Pro:400,300,300italic,400italic,600,600italic'>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://www.wolframcdn.com/css/normalize.css">
+<link rel="stylesheet" href="/html_includes/header-footer/header-footer.css">
+<link rel="stylesheet" href="/html_includes/header-footer/lexia/lexia.css">
+<link rel="stylesheet" href="/html_includes/header-footer/header-subnav.css">
+
+<script type="text/javascript">
+    //
+        var stage = '';
+    //
+
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    (function(a,b,c,d,e,f,g,h){a['WolframAnalyticsObject']=f;a[f]=a[f]||function(){
+    if(getCookie('__cookie_consent')!=="0"){(a[f].q=a[f].q||[]).push(arguments)}},a[f].q=a[f].q||[],a[f].t=1*new Date();
+    a[f].d=d,a[f].v=e,g=b.createElement(c),h=b.getElementsByTagName(c)[0],g.async=1
+    ,g.src=d+'/js/'+e+'/raw.js',h.parentNode.insertBefore(g,h)})
+    (window,document,'script','//wal.wolfram.com','1.1.0','wal');
+
+    wal('log','pageload');
+</script>
+
+
+        <link href="/css/examples-new.css" rel="stylesheet" type="text/css" />
+        <link href="/css/fonts.css" rel="stylesheet" type="text/css" />
+        <!-- JAVASCRIPT -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header id="wa-common-header" class="authenticating" lang="en">
+    <nav>
+        <h1>
+          <a href="/">
+            <img class="tracking-header-logo" src="/html_includes/header-footer/img/wolfram-alpha-logo.svg?v=2" alt="Wolfram|Alpha" width="166" height="25">
+          </a>
+        </h1>
+        <form id="header-input-form" class="input" action="/input/" method="get">
+            <label for="wa-top-input">What would you like to know about ?</label>
+            <input type="text" id="wa-top-input" name="i" placeholder="What would you like to know about ?">
+            <button>Compute</button>
+        </form>
+        <div class="menu-toggle"><span class="icon-hamburger-menu"></span></div>
+        <ul class="main-nav">
+            <li class="pro-item">
+                <a class="header-pro-link" id="pro-button">Upgrade to Pro</a>
+                <ul class="pro-menu" id="pro-menu-item">
+                    <li class="feature-box">
+                        <div class="pricing-feature-item">
+                            <div class="pro-menu-header" id="pro-menu-everyone">For Everyone</div>
+                            <nav tracking-name="For Everyone">
+                                <a class="pricing-feature" href="/pro/pricing/">Pricing</a>
+                                <a class="pricing-feature-bar">|</a>
+                                <a class="pricing-feature" href="/pro/">Features</a>
+                            </nav>
+                        </div>
+                    </li>
+                    <li class="feature-box">
+                        <div class="pricing-feature-item">
+                            <div class="pro-menu-header" id="pro-menu-students">For Students</div>
+                            <nav tracking-name="For Students">
+                                <a class="pricing-feature" href="/pro/pricing/students/">Pricing</a>
+                                <a class="pricing-feature-bar">|</a>
+                                <a class="pricing-feature" href="/pro-for-students/">Features</a>
+                            </nav>
+                        </div>
+                    </li>
+                    <li class="feature-box">
+                        <div class="pricing-feature-item">
+                            <div class="pro-menu-header" id="pro-menu-educators">For Educators</div>
+                            <nav tracking-name="For Educators">
+                                <a class="pricing-feature" href="/pro/pricing/educators/">Pricing</a>
+                                <a class="pricing-feature-bar">|</a>
+                                <a class="pricing-feature" href="/pro-for-educators/">Features</a>
+                            </nav>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+              <a class="icon-apps">Apps</a>
+              <ul class="apps-menu">
+                <li><a class="web-apps-link tracking-apps-link" href="/web-apps">Web Apps</a></li>
+                <li><a class="wpg-link tracking-apps-link" href="/problem-generator">Problem Generator</a></li>
+                <li><a class="mobile-apps-link tracking-apps-link" href="http://products.wolframalpha.com/mobile/">Mobile Apps</a></li>
+                <li><a class="all-products-link tracking-apps-link" href="http://products.wolframalpha.com/">All Products</a></li>
+              </ul>
+            </li>
+            <li><a href="/tour/" class="tracking-header-link">Tour</a></li>
+            <li class="oauth">
+                <a id="sign-in-placeholder" class="sign-in loading-sign-in"></a>
+                <a id="sign-in-btn" class="sign-in hidden tracking-sign-in">Sign in</a>
+                <button class="signed-in icon-user-email"></button>
+                <ul class="user-menu">
+                  <div>
+                    <li><a class="tracking-user-menu-link" href='/?lbox=auth-favorites'>Favorites</a></li>
+                    <li><a class="tracking-user-menu-link" href='/?lbox=auth-history'>History</a></li>
+                    <li><a class="tracking-user-menu-link" href='/?lbox=auth-preferences'>Preferences</a></li>
+                    <li><a class="tracking-user-menu-link" href='/?lbox=auth-downloads'>Downloads</a></li>
+                    <li><a class="tracking-user-menu-link" href='/?lbox=auth-uploads'>Uploads</a></li>
+          
+          <li><a class="tracking-user-menu-link" href='https://account.wolfram.com/products/wolfram-alpha/'>Account</a></li>
+          
+                  </div>
+                  <div>
+                    <li><a class="tracking-user-menu-link" href='http://developer.wolframalpha.com/portal/mywidgets/'>My Widgets</a></li>
+                    <li><a class="tracking-user-menu-link" href='http://developer.wolframalpha.com/portal/myapps/'>My Apps (API)</a></li>
+                  </div>
+                  <div>
+                    <li><a href='#' class='sign-out'>Sign Out</a></li>
+                  </div>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<noscript>
+  <header id="wa-common-header">
+      <nav>
+          <h1>
+            <a href="/">
+              <img class="tracking-header-logo" src="/html_includes/header-footer/img/wolfram-alpha-logo.svg?v=2" alt="Wolfram|Alpha" width="166" height="25">
+            </a>
+          </h1>
+          <form id="header-input-form" class="input" action="/input/" method="get">
+              <label for="wa-top-input">What would you like to know about ?</label>
+              <input type="text" id="wa-top-input" name="i" placeholder="What would you like to know about ?">
+              <button>Compute</button>
+          </form>
+          <div class="menu-toggle"><span class="icon-hamburger-menu"></span></div>
+          <ul class="main-nav">
+              <li>
+                <a class="header-pro-link">Upgrade to Pro</a>
+                <ul class="pro-menu">
+                  <li><a class="tracking-pro-link" href="/pro/">For Everyone</a></li>
+                  <li><a class="tracking-pro-link" href="/pro-for-students/">For Students</a></li>
+                  <li><a class="tracking-pro-link" href="/pro-for-educators/">For Educators</a></li>
+                  <li><a class="tracking-pro-link" href="/pro/pricing/">Pricing</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="icon-apps">Apps</a>
+                <ul class="apps-menu">
+                  <li><a class="web-apps-link tracking-apps-link" href="/web-apps">Web Apps</a></li>
+                  <li><a class="wpg-link tracking-apps-link" href="/problem-generator">Problem Generator</a></li>
+                  <li><a class="mobile-apps-link tracking-apps-link" href="http://products.wolframalpha.com/mobile/">Mobile Apps</a></li>
+                  <li><a class="all-products-link tracking-apps-link" href="http://products.wolframalpha.com/">All Products</a></li>
+                </ul>
+              </li>
+              <li><a href="/tour/" class="tracking-header-link">Tour</a></li>
+              <li class="oauth">
+                <button class='signed-in icon-user-email'></button>
+                  <ul class='user-menu'>
+                    <div>
+                      <li><a class="tracking-user-menu-link" href='/?lbox=auth-favorites'>Favorites</a></li>
+                      <li><a class="tracking-user-menu-link" href='/?lbox=auth-history'>History</a></li>
+                      <li><a class="tracking-user-menu-link" href='/?lbox=auth-preferences'>Preferences</a></li>
+                      <li><a class="tracking-user-menu-link" href='/?lbox=auth-downloads'>Downloads</a></li>
+                      <li><a class="tracking-user-menu-link" href='/?lbox=auth-uploads'>Uploads</a></li>
+                      <li><a class="tracking-user-menu-link" href='/?lbox=auth-account'>Account</a></li>
+                    </div>
+                    <div>
+                      <li><a class="tracking-user-menu-link" href='http://developer.wolframalpha.com/portal/mywidgets/'>My Widgets</a></li>
+                      <li><a class="tracking-user-menu-link" href='http://developer.wolframalpha.com/portal/myapps/'>My Apps (API)</a></li>
+                    </div>
+                  </ul>
+              </li>
+          </ul>
+      </nav>
+  </header>
+<div class="js-banner">
+  <img src="/exclam-icon.png"></img>
+  Enable Javascript to interact with content and submit forms on Wolfram|Alpha websites. <a href="http://enable-javascript.com">Learn How &raquo;</a>
+</div>
+</noscript>
+<script>
+    // changes the text of the pro button
+    const changeProButton = function(proLevel) {
+        if(proLevel <= 1){
+            document.getElementById('pro-button').innerHTML = "Upgrade to Pro";
+        }
+        else{
+            document.getElementById('pro-button').innerHTML = "Pro";
+        }
+    };
+
+</script>
+<div id="wa-top-overlay"></div>
+
+        <section id="examples-header">
+            <div id="header-content-wrapper">
+                <div id="examples-header-text">
+                    <div id="examples-title">Examples by Topic</div>
+                    <div id="examples-desc">What can you ask Wolfram|Alpha about?</div>
+                </div>
+                <div id="search-bar"></div>
+            </div>
+        </section>
+        <section id="examples-body">
+            
+                
+                    
+                        <div id="math" class="example-section">
+                            <div class="section-title-wrapper">
+                                <a href="/examples/mathematics/index.html" class="section-title">Mathematics </a>
+                                <span class="section-chevron">&rsaquo;</span>
+                            </div>
+                            <div class="section-examples">
+                            
+                                <div class="elementary-math example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/elementary-math/index.html" class="example-link">Elementary Math </a></div>
+                                </div>
+                            
+                                <div class="algebra example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/algebra/index.html" class="example-link">Algebra </a></div>
+                                </div>
+                            
+                                <div class="geometry example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/geometry/index.html" class="example-link">Geometry </a></div>
+                                </div>
+                            
+                                <div class="plotting-and-graphics example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/plotting-and-graphics/index.html" class="example-link">Plotting &amp; Graphics </a></div>
+                                </div>
+                            
+                                <div class="calculus example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/calculus-and-analysis/index.html" class="example-link">Calculus &amp; Analysis </a></div>
+                                </div>
+                            
+                                <div class="differential-equations example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/differential-equations/index.html" class="example-link">Differential Equations </a></div>
+                                </div>
+                            
+                                <div class="statistics example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/statistics/index.html" class="example-link">Statistics </a></div>
+                                </div>
+                            
+                                <div class="mathematical-functions example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/mathematical-functions/index.html" class="example-link">Mathematical Functions </a></div>
+                                </div>
+                            
+                                <div class="numbers example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/numbers/index.html" class="example-link">Numbers </a></div>
+                                </div>
+                            
+                                <div class="linear-algebra example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/linear-algebra/index.html" class="example-link">Linear Algebra </a></div>
+                                </div>
+                            
+                                <div class="famous-math-problems example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/famous-math-problems/index.html" class="example-link">Famous Math Problems </a></div>
+                                </div>
+                            
+                                <div class="number-theory example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/number-theory/index.html" class="example-link">Number Theory </a></div>
+                                </div>
+                            
+                                <div class="applied-math example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/applied-mathematics/index.html" class="example-link">Applied Math </a></div>
+                                </div>
+                            
+                                <div class="trigonometry example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/trigonometry/index.html" class="example-link">Trigonometry </a></div>
+                                </div>
+                            
+                                <div class="probability example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/probability/index.html" class="example-link">Probability </a></div>
+                                </div>
+                            
+                                <div class="complex-analysis example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/complex-analysis/index.html" class="example-link">Complex Analysis </a></div>
+                                </div>
+                            
+                                <div class="logic-set-theory example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/logic-and-set-theory/index.html" class="example-link">Logic &amp; Set Theory </a></div>
+                                </div>
+                            
+                                <div class="discrete-math example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/discrete-mathematics/index.html" class="example-link">Discrete Mathematics </a></div>
+                                </div>
+                            
+                                <div class="mathematical-definitions example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/mathematics/mathematical-definitions/index.html" class="example-link">Mathematical Definitions</a></div>
+                                </div>
+                            
+                                <div class="more-wrapper">
+                                    <button class="more-examples">+ More examples</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    
+                        <div id="science-and-technology" class="example-section">
+                            <div class="section-title-wrapper">
+                                <a href="/examples/science-and-technology/index.html" class="section-title">Science &amp; Technology </a>
+                                <span class="section-chevron">&rsaquo;</span>
+                            </div>
+                            <div class="section-examples">
+                            
+                                <div class="physics example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/physics/index.html" class="example-link">Physics </a></div>
+                                </div>
+                            
+                                <div class="chemistry example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/chemistry/index.html" class="example-link">Chemistry </a></div>
+                                </div>
+                            
+                                <div class="units-and-measures example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/units-and-measures/index.html" class="example-link">Units &amp; Measures </a></div>
+                                </div>
+                            
+                                <div class="engineering example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/engineering/index.html" class="example-link">Engineering </a></div>
+                                </div>
+                            
+                                <div class="computational-science example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/computational-sciences/index.html" class="example-link">Computational Sciences </a></div>
+                                </div>
+                            
+                                <div class="earth-sciences example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/earth-sciences/index.html" class="example-link">Earth Sciences </a></div>
+                                </div>
+                            
+                                <div class="transportation example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/transportation/index.html" class="example-link">Transportation </a></div>
+                                </div>
+                            
+                                <div class="materials example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/materials/index.html" class="example-link">Materials </a></div>
+                                </div>
+                            
+                                <div class="technological-world example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/technological-world/index.html" class="example-link">Technological World </a></div>
+                                </div>
+                            
+                                <div class="life-sciences example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/life-sciences/index.html" class="example-link">Life Sciences </a></div>
+                                </div>
+                            
+                                <div class="space-and-astronomy example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/space-and-astronomy/index.html" class="example-link">Space &amp; Astronomy </a></div>
+                                </div>
+                            
+                                <div class="weather-and-meteorology example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/weather-and-meteorology/index.html" class="example-link">Weather &amp; Meteorology </a></div>
+                                </div>
+                            
+                                <div class="physical-geography example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/physical-geography/index.html" class="example-link">Physical Geography </a></div>
+                                </div>
+                            
+                                <div class="health-and-medicine example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/health-and-medicine/index.html" class="example-link">Health &amp; Medicine </a></div>
+                                </div>
+                            
+                                <div class="food-science example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/science-and-technology/food-science/index.html" class="example-link">Food Science</a></div>
+                                </div>
+                            
+                                <div class="more-wrapper">
+                                    <button class="more-examples">+ More examples</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    
+                        <div id="society-and-culture" class="example-section">
+                            <div class="section-title-wrapper">
+                                <a href="/examples/society-and-culture/index.html" class="section-title">Society &amp; Culture </a>
+                                <span class="section-chevron">&rsaquo;</span>
+                            </div>
+                            <div class="section-examples">
+                            
+                                <div class="people example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/people/index.html" class="example-link">People </a></div>
+                                </div>
+                            
+                                <div class="arts-and-media example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/arts-and-media/index.html" class="example-link">Arts &amp; Media </a></div>
+                                </div>
+                            
+                                <div class="history example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/history/index.html" class="example-link">History </a></div>
+                                </div>
+                            
+                                <div class="words-and-linguistics example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/words-and-linguistics/index.html" class="example-link">Words &amp; Linguistics </a></div>
+                                </div>
+                            
+                                <div class="money-and-finance example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/money-and-finance/index.html" class="example-link">Money &amp; Finance </a></div>
+                                </div>
+                            
+                                <div class="dates-and-times example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/dates-and-times/index.html" class="example-link">Dates &amp; Times </a></div>
+                                </div>
+                            
+                                <div class="food-and-nutrition example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/food-and-nutrition/index.html" class="example-link">Food &amp; Nutrition </a></div>
+                                </div>
+                            
+                                <div class="demographics-and-social-statistics example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/demographics-and-social-statistics/index.html" class="example-link">Demographics &amp; Social Statistics </a></div>
+                                </div>
+                            
+                                <div class="institutions-and-organizations example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/institutions-and-organizations/index.html" class="example-link">Institutions &amp; Organizations </a></div>
+                                </div>
+                            
+                                <div class="political-geography example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/political-geography/index.html" class="example-link">Political Geography </a></div>
+                                </div>
+                            
+                                <div class="art-and-design example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/art-and-design/index.html" class="example-link">Art &amp; Design </a></div>
+                                </div>
+                            
+                                <div class="points-of-interest example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/points-of-interest/index.html" class="example-link">Points of Interest </a></div>
+                                </div>
+                            
+                                <div class="economic-data example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/economic-data/index.html" class="example-link">Economic Data </a></div>
+                                </div>
+                            
+                                <div class="games-and-puzzles example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/games-and-puzzles/index.html" class="example-link">Games &amp; Puzzles </a></div>
+                                </div>
+                            
+                                <div class="education example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/education/index.html" class="example-link">Education </a></div>
+                                </div>
+                            
+                                <div class="sports example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/sports/index.html" class="example-link">Sports</a></div>
+                                </div>
+                            
+                                <div class="more-wrapper">
+                                    <button class="more-examples">+ More examples</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    
+                        <div id="everyday-life" class="example-section">
+                            <div class="section-title-wrapper">
+                                <a href="/examples/everyday-life/index.html" class="section-title">Everyday Life </a>
+                                <span class="section-chevron">&rsaquo;</span>
+                            </div>
+                            <div class="section-examples">
+                            
+                                <div class="personal-health example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/personal-health/index.html" class="example-link">Personal Health </a></div>
+                                </div>
+                            
+                                <div class="personal-finance example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/personal-finance/index.html" class="example-link">Personal Finance </a></div>
+                                </div>
+                            
+                                <div class="surprises example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/surprises/index.html" class="example-link">Surprises </a></div>
+                                </div>
+                            
+                                <div class="entertainment example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/entertainment/index.html" class="example-link">Entertainment </a></div>
+                                </div>
+                            
+                                <div class="household-science example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/household-science/index.html" class="example-link">Household Science </a></div>
+                                </div>
+                            
+                                <div class="household-math example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/household-math/index.html" class="example-link">Household Math </a></div>
+                                </div>
+                            
+                                <div class="hobbies example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/hobbies/index.html" class="example-link">Hobbies </a></div>
+                                </div>
+                            
+                                <div class="todays-world example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/todays-world/index.html" class="example-link">Today&#x27;s World </a></div>
+                                </div>
+                            
+                                <div class="travel example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/everyday-life/travel/index.html" class="example-link">Travel </a></div>
+                                </div>
+                            
+                                <div class="dates-and-times example-page">
+                                    <div class="example-link-wrapper"><a href="/examples/society-and-culture/dates-and-times/index.html" class="example-link">Dates &amp; Times</a></div>
+                                </div>
+                            
+                                <div class="more-wrapper">
+                                    <button class="more-examples">+ More examples</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    
+                        <div id="pro-wrapper">
+                            <div class="example-section pro">
+                                <div class="section-title-wrapper">
+                                    <a href="/examples/pro-features/index.html" class="section-title">Pro Features </a>
+                                    <span class="section-chevron">&rsaquo;</span>
+                                </div>
+                                <div class="section-examples">
+                                    
+                                        <div class="step-by-step-solutions example-page">
+                                            <div class="example-link-wrapper"><a href="/examples/pro-features/step-by-step-solutions/index.html" class="example-link">Step-by-Step Solutions </a></div>
+                                        </div>
+                                    
+                                        <div class="data-input example-page">
+                                            <div class="example-link-wrapper"><a href="/examples/pro-features/data-input/index.html" class="example-link">Data Input </a></div>
+                                        </div>
+                                    
+                                        <div class="image-input example-page">
+                                            <div class="example-link-wrapper"><a href="/examples/pro-features/image-input/index.html" class="example-link">Image Input </a></div>
+                                        </div>
+                                    
+                                        <div class="file-upload example-page">
+                                            <div class="example-link-wrapper"><a href="/examples/pro-features/file-upload/index.html" class="example-link">File Upload</a></div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+            
+        </section>
+        <footer lang="en" id="wa-common-footer">
+    <nav class="wolfram-alpha">
+        <h2 class="visuallyhidden">Wolfram|Alpha Pages</h2>
+        <ul id="footer-links">
+            <li><a href="/pro/" class="tracking-footer-link">Pro</a></li>
+            <li><a href="/web-apps/" class="tracking-footer-link">Web Apps</a></li>
+            <li><a href="http://products.wolframalpha.com/mobile/" class="tracking-footer-link">Mobile Apps</a></li>
+            <li><a href="http://products.wolframalpha.com/" class="tracking-footer-link">Products</a></li>
+            <li><a href="http://products.wolframalpha.com/business/" class="tracking-footer-link">Business Solutions</a></li>
+            <li><a href="http://products.wolframalpha.com/developers/" class="tracking-footer-link">API &amp; Developer Solutions</a></li>
+            <li><a href="/about/" class="tracking-footer-link">About</a></li>
+            <li><a href="/resources/" class="tracking-footer-link">Resources &amp; Tools</a></li>
+            <li><a href="http://blog.wolfram.com/category/wolframalpha/" class="tracking-footer-link">Blog</a></li>
+            <li><a href="http://community.wolfram.com/" class="tracking-footer-link">Community</a></li>
+            <li><a href="/contact-us/" class="tracking-footer-link">Contact</a></li>
+            <li><a href="/social/" class="tracking-footer-link-connect"> <ul class="connect-icons">
+                <li class="icon-social-facebook"></li>
+                <li class="icon-social-twitter"></li>
+                <li class="icon-social-tumblr"></li>
+                <li class="icon-social-linkedin"></li>
+            </ul></a></li>
+        </ul>
+    </nav>
+    <ul class="colophon">
+        <li class="lang-switcher-container">
+            <a id="lang-switcher">
+                <div class="globe"></div>
+                <span>English</span>
+                <ul></ul>
+            </a>
+        </li>
+        <li><span class="cell"><span class="text">&copy;2021 Wolfram Alpha LLC</span></span></li>
+        <li><a href="/termsofuse/" target="_blank" class="tracking-footer-link"><span class="text">Terms</span></a></li>
+        <li><a href="/privacypolicy.html" target="_blank" class="tracking-footer-link"><span class="text">Privacy</span></a></li>
+    </ul>
+    <nav class="wolfram">
+        <h2><a href="https://www.wolfram.com/" class="tracking-footer-link"><span class="logo"><span class="icon-wolfram-corporate-spikey"></span> <span class="icon-wolfram-corporate-logotype"></span></span><span class="visuallyhidden">Wolfram Research</span></a></h2>
+        <ul>
+            <li><a href="https://www.wolfram.com/" class="tracking-footer-link">wolfram.com</a></li>
+            <li><a href="https://www.wolfram.com/language/" class="tracking-footer-link">Wolfram Language</a></li>
+            <li><a href="https://www.wolfram.com/education/" class="tracking-footer-link">Wolfram for Education</a></li>
+            <li><a href="http://demonstrations.wolfram.com/" class="tracking-footer-link">Wolfram Demonstrations</a></li>
+            <li><a href="https://www.wolfram.com/mathematica/" class="tracking-footer-link">Mathematica</a></li>
+            <li><a href="http://mathworld.wolfram.com/" class="tracking-footer-link">MathWorld</a></li>
+        </ul>
+    </nav>
+</footer>
+<script type="text/javascript">
+ window.api = {
+     billingSrc: "www.wolframalpha.com",
+ }
+ window.user = {
+     signIn: "/auth/sign-in/url"
+ }
+
+ if (stage === 'test.') {
+     window.api.billing = "https://billing.test.wolfram.com/api/prices.json"
+ } else if (stage === 'devel.') {
+     window.api.billing = "https://billing.devel.wolfram.com/api/prices.json"
+ } else {
+     window.api.billing = "https://billing.wolfram.com/api/prices.json"
+ }
+</script>
+<script src="https://www.wolframcdn.com/javascript/jquery-2.1.4.min.js"></script>
+<script src="/javascript/url-polyfill-1.0.5/url-polyfill.min.js"></script>
+<script src="/javascript/cookies.js"></script>
+<script src="/html_includes/header-footer/header-footer.js"></script>
+<script>
+    var script = document.createElement('script');
+    // 
+    com.wolframalpha.module([
+        'com.wolframalpha.service.WAUserService'
+    ], function(
+        WAUserService
+    ) {
+      WAUserService.getUser().then(function handleLoggedInOut(user) {
+        if(user === null) {
+          script.src = "//www.wolframcdn.com/consent/cookie-consent.php";
+          document.head.appendChild(script);
+        }
+        else {
+          script.src = "//www.wolframcdn.com/consent/cookie-consent.php?signedin=true";
+          document.head.appendChild(script);
+        }
+      });
+    });
+    // 
+</script>
+
+<script type="text/javascript">
+	/* AdRoll tracking code
+	 * Currently included to specific pages. Consider moving this out to another file if this changes
+	 */
+
+	adroll_adv_id = "YK5YAN4TMJFF5ER2Q5CWAP";
+	adroll_pix_id = "XO5UPJF2XBFPZFSQFDAIIA";
+	/* OPTIONAL: provide email to improve user identification */
+	/* adroll_email = "username@example.com"; */
+	(function () {
+		var _onload = function(){
+			if (document.readyState && !/loaded|complete/.test(document.readyState)) {
+				setTimeout(_onload, 10);
+				return;
+			}
+			if (!window._adroll_loaded){
+				_adroll_loaded=true;
+				setTimeout(_onload, 50);
+				return;
+			
+			}
+			var scr = document.createElement("script");
+			var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+			scr.setAttribute('async', 'true');
+			scr.type = "text/javascript";
+			scr.src = host + "/j/roundtrip.js";
+			((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+		};
+		if (window.addEventListener) {
+			window.addEventListener('load', _onload, false);
+		}
+		else {
+			window.attachEvent('onload', _onload)
+		}
+	}());
+</script>
+<script type="text/javascript">
+</script>
+
+
+        <script src="/javascript/examplesListenersNew.js"></script>
+    </body>
+</html>
