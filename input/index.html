@@ -39,7 +39,10 @@ function submit(podstate) {
     return fetch(corsProxy + 'api.wolframalpha.com/v2/query?' + '&output=' + 'json' + '&podstate=' + 'step-by-step+solution' + '&podstate=' + 'step-by-step' + '&podstate=' + 'show+all+steps' + '&scantimeout=' + 30 + '&podtimeout=' + 30 + '&formattimeout=' + 30 + '&parsetimeout=' + 30 + '&totaltimeout=' + 30 + '&reinterpret=' + true + '&podstate=' + podstate + '&appid=' + appid[new Date % appid.length] + '&input=' + ['Power', 'Sqrt', 'Cbrt', 'Surd', 'Exp', 'Log', 'Log10', 'Abs', 'D', 'Partial', 'Integrate', 'Sum', 'Product', 'Limit', 'UnitStep', 'DiracDelta', 'Piecewise', 'LaplaceTransform', 'InverseLaplaceTransform', 'FourierTransform', 'InverseFourierTransform', 'Sin', 'Cos', 'Tan', 'Sec', 'Csc', 'Cot', 'ArcSin', 'ArcCos', 'ArcTan', 'Sinh', 'Cosh', 'Tanh', 'Sech', 'Csch', 'Coth', 'ArcSinh', 'ArcCosh', 'ArcTanh', 'ArcSech', 'ArcCsch', 'ArcCoth'].reduce(function (input, builtInSymbol) {
         __PS_MV_REG = [];
         return input.replaceAll(builtInSymbol + '%5B', ' ' + builtInSymbol + '%5B');
-    }, location.search.replace(/.*i=/, '').replaceAll('%E2%85%87', 'e'))).then(function (response) {
+    }, location.search.replace(/.*i=/, '').replaceAll(/%5C%28(...?)%29/g, function (match, p1) {
+        __PS_MV_REG = [];
+        return String.fromCodePoint(p1);
+    }).replaceAll('%E2%85%87', 'e'))).then(function (response) {
         return response.json();
     }).then(function (json) {
         __PS_MV_REG = [];
