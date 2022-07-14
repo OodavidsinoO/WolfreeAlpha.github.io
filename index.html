@@ -1,196 +1,301 @@
-	<meta name=viewport content=width=device-width,initial-scale=1>
-	<meta charSet=utf-8>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
 	<title> WolfreeAlpha: FREE Wolfram|Alpha Step-by-Step Solution </title>
-	<link rel=stylesheet href=https://unpkg.com/milligram >
 	<style>
+		body {
+			font-family: system-ui;
+			line-height: 2.5;
+		}
+
 		header {
 			text-align: center;
-			background: ghostwhite;
 		}
+
+		h1 {
+			margin: 0;
+			font-size: 300%;
+			font-weight: normal;
+		}
+
 		main {
 			margin: auto;
-			max-width: 28em;
+			max-width: 40em;
 		}
-		pre {
-			white-space: pre-line;
+
+		.button {
+			color: white;
+			background-color: #6200ee;
+			border-radius: 5px;
+			padding: 10px;
 			border: none;
+			box-shadow: 1px 2px 9px -4px black;
+		}
+
+		pre {
+			line-height: .5;
+		}
+
+		a {
+			text-decoration: none;
 		}
 	</style>
+</head>
+<body>
 	<header>
-		<hr>
-		<h1> <a href=input/index.html> WolfrẹẹAlpha </a> </h1>
-		<p>
-			<code>
-				Get FREE access to Wolfram|Alpha Pro. <br>
-				Unlock step-by-step solutions for everyone.
-			</code>
-		</p>
-		<a href=input/index.html class=button> Get Started </a>
-		<hr>
+		<br>
+		<h1> <a href="input/index.html">WolfreeAlpha</a> </h1>
+		<small>
+			Get FREE access to Wolfram|Alpha Pro. <br>
+			Unlock step-by-step solutions for everyone.
+		</small>
+		<h4>
+			<a href="input/index.html" class="button">
+				&nbsp; GET STARTED &nbsp;
+			</a>
+		</h4>
+		<br>
 	</header>
 	<main>
-		<h3> Mirror Site </h3>
-		<p>
-			Bookmark the following pages in case this server goes down.
-			<pre>
-				<a> http://WolfreeAlpha.onrender.com </a>
-				<a> http://WolfreeAlpha.on.fleek.co </a>
-				<a> http://WolfreeAlpha.netlify.app </a>
-				<a> http://WolfreeAlpha.vercel.app </a>
-				<a> http://WolfreeAlpha.glitch.me </a>
-				<a> http://WolfreeAlpha.gitlab.io </a>
-				<a> http://WolfreeAlpha.github.io </a>
-				<a> http://WolfreeAlpha.pages.dev </a>
-				<a> http://Wolfree.onrender.com </a>
-				<a> http://Wolfree.on.fleek.co </a>
-				<a> http://Wolfree.netlify.app </a>
-				<a> http://Wolfree.vercel.app </a>
-				<a> http://Wolfree.glitch.me </a>
-				<a> http://Wolfree.gitlab.io </a>
-				<a> http://Wolfree.pages.dev </a>
-			</pre>
-		</p>
+		<ul class="table-of-contents"></ul>
+		<h2> Quickstart Guide </h2>
+		Take the mathematical problem <b contenteditable>x2y'=x2-y2</b> for example.
+		<ol>
+			<li>
+				Go to <a>https://www.wolframalpha.com/input?i=x2y%27%3Dx2-y2</a> and click the orangish “<b>Step-by-step solution</b>” button.
+				Notice that the full solution is paywalled.
+			</li>
+			<li>
+				On this page, click the bluish “<b>GET STARTED</b>” button above.
+				Notice that an orangish single-line text field appears.
+			</li>
+			<li>
+				Click the text field and enter your mathematical problem.
+				Type <b contenteditable>x2y'=x2-y2</b> for example.
+			</li>
+			<li>
+				Click the orangish equal sign button or press the “<b>Enter</b>” key.
+				Notice that the complete solution is unlocked.
+			</li>
+		</ol>
+		<h2> Mirror Site </h2>
+		Bookmark the following Gitea repositories and web applications just in case this server goes down.
+		<h3> Web App </h3>
+		If your country has blocked access to all mirrors, download the <a href="http://torproject.org">Tor Browser</a> to circumvent censorship.
+		<pre><a>http://WolfreeAlpha.onrender.com</a></pre>
+		<pre><a>http://WolfreeAlpha.on.fleek.co</a></pre>
+		<pre><a>http://WolfreeAlpha.netlify.app</a></pre>
+		<pre><a>http://WolfreeAlpha.glitch.me</a></pre>
+		<pre><a>http://WolfreeAlpha.gitlab.io</a></pre>
+		<pre><a>http://WolfreeAlpha.github.io</a></pre>
+		<pre><a>http://WolfreeAlpha.pages.dev</a></pre>
+		<pre><a>http://Wolfree.onrender.com</a></pre>
+		<pre><a>http://Wolfree.on.fleek.co</a></pre>
+		<pre><a>http://Wolfree.netlify.app</a></pre>
+		<pre><a>http://Wolfree.glitch.me</a></pre>
+		<pre><a>http://Wolfree.gitlab.io</a></pre>
+		<pre><a>http://Wolfree.pages.dev</a></pre>
 		<h3> Source Code </h3>
-		<p>
-			<pre>
-				SPDX-License-Identifier: AGPL-3.0-or-later
-			</pre>
-			Git server:
-			<pre>
-				<a> http://git.kiwifarms.net/wolfree </a>
-			</pre>
-			V3 onion service:
-			<pre>
-				<a> http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion/wolfree </a>
-			</pre>
-			Tor2Web proxy:
-			<pre>
-				<a> http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion.ly/wolfree </a>
-				<a> http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion.ws/wolfree </a>
-				<a> http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion.pet/wolfree </a>
-				<a> http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion.dog/wolfree </a>
-				<a> http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.tor2web.io/wolfree </a>
-				<a> http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.tor2web.to/wolfree </a>
-				<a> http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.tor2web.xyz/wolfree </a>
-			</pre>
-		</p>
-		<h3> FAQ </h3>
-		<h4> Wolfree is down for me. </h4>
-		<p>
-			Visit the mirrors.
-			If your country has blocked access to the mirrors,
-			enable <a href=http://developers.cloudflare.com/1.1.1.1/encrypted-dns/dns-over-https/encrypted-dns-browsers > DNS over HTTPS </a> to override your country's censorship over the internet
-			or download the <a href=http://torproject.org > Tor Browser </a> to access websites your government has banned.
-		</p>
-		<h4> Is Wolfree down? Why can't I access Wolfree? </h4>
-		<p>
-			Your government may have banned access to Wolfree.
-			<ul>
-				<li>
-					Enable <a href=http://privacyguides.org/providers/dns > DoH</a>,
-					e.g., <a href=http://developers.cloudflare.com/1.1.1.1/encrypted-dns/dns-over-https/encrypted-dns-browsers > 1.1.1.1</a>.
-				</li>
-				<li>
-					Download <a href=http://privacyguides.org/browsers > a browser that circumvents censorship</a>, <br> &nbsp; &nbsp; &nbsp;
-					e.g., <a href=http://torproject.org > Tor Browser</a>.
-				</li>
-				<li>
-					Install <a href=http://privacyguides.org/providers/vpn > a free VPN</a>,
-					e.g., <a href=http://protonvpn.com > ProtonVPN</a>.
-				</li>
-			</ul>
-		</p>
-		<h4> Do I need to use Tor to access Wolfree? </h4>
-		<p>
-			Unless you live in a country without freedom of speech,
-			where reading certain mathematical expressions is banned,
-			then there is no reason to use Tor.
-			But if you can't access Wolfree because it is blocked/banned in your country,
-			then Tor will unlock access.
-		</p>
-		<h4> Will I get in trouble with my internet provider (ISP) or copyright lawyers if I read mathematical expressions from Wolfree? </h4>
-		<p>
-			No case exists of someone being sued for consuming a copyrighted book, song, or movie from a website.
-			Reading mathematical expressions from Wolfree's website isn't filesharing (P2P),
-			so copyright holders can't find out who is visiting Wolfree,
-			and they wouldn't care if they knew.
-		</p>
-		<p>
-			The programmers of Wolfree are the real targets of the (unsuccessful) lawsuits because they distribute the step-by-step solution,
-			not the users.
-			Thousands of students and scientists around the world safely visit Wolfree every day,
-			so you're in good company.
-		</p>
-		<h4> How to Contact Wolfree </h4>
-		<p>
-			Email: hb4lhgu0h@mozmail.com
-		</p>
-		<p>
-			Fediverse: <a href=http://kiwifarms.cc/wolfree > @wolfree@kiwifarms.cc </a>
-		</p>
-		<p>
-			The programmers check Email twice a year. Send urgent messages by Fediverse instead.
-		</p>
-		<h4> How to Contact Wolfree by Email? </h4>
-		<p>
-			<ol>
-				<li> Choose a mailbox provider. </li>
-				<li> Create an account and sign in. </li>
-				<li> Send your message to <code> hb4lhgu0h@mozmail.com </code> . </li>
-			</ol>
-		</p>
-		<h4> How to Contact Wolfree by Fediverse? </h4>
-		<p>
-			<ol>
-				<li> Choose a Pleroma, Mastodon, or Misskey instance. </li>
-				<li> Create an account and sign in. </li>
-				<li> Send your message to <code> <a href=http://kiwifarms.cc/wolfree > @wolfree@kiwifarms.cc </a> </code> . </li>
-			</ol>
-		</p>
-		<h4> Why does Wolfree prefer federated social networks? </h4>
-		<p>
-			<small><small>
-				<i> Further information: </i> <a> http://joinfediverse.wiki </a> <br>
-				<i> Main article: </i> <a> http://docs.joinmastodon.org </a> <br>
-				<i> See also: </i> <a> http://torresjrjr.com/archive/2020-07-19-guide-to-the-fediverse </a> <br>
-			</small></small>
-		</p>
-		<p>
-			Everybody knows you don't need to use the same email provider to communicate via email.
-			You can send a mail from riseup.net to gmail.com and the other way around.
-			That's about the same way that "federation" in the Fediverse works.
-			Federation just means that different or decentralized servers or instances can communicate with each other via a protocol.
-			Just like email uses POP, IMAP, or SMTP protocols for federation, the Fediverse mostly uses ActivityPub.
-		</p>
-		<h4> Why does Wolfree prefer copyleft licenses? </h4>
-		<p>
-			<small><small>
-				<i> Further information: </i> <a> http://blueoakcouncil.org/primer </a> <br>
-				<i> Main article: </i> <a> http://gnu.org/philosophy/free-software-even-more-important.en.html </a> <br>
-				<i> See also: </i> <a> http://lukesmith.xyz/articles/why-i-use-the-gpl-and-not-cuck-licenses </a> <br>
-			</small></small>
-		</p>
-		<p>
-			Copyleft licenses work like permissive licenses with a catch:
-			they require sharing and licensing the source code for new software built with copyleft-licensed software as open software,
-			too.
-			For this reason,
-			copyleft licenses are sometimes called “share-alike” licenses,
-			though “copyleft” is the term you’ll hear most in software.
-		</p>
-		<h3> Acknowledgment </h3>
-		<p>
-			<pre>
-				<a> http://library.lol </a>
-				<a> http://sci-hub.se </a>
-				<a> http://libgen.fun </a>
-				<a> http://freeread.org </a>
-				<a> http://fsf.org </a>
-			</pre>
-		</p>
+		The Wolfree Developers may make important announcements in the following Gitea repositories.
+		SPDX-License-Identifier: AGPL-3.0-or-later
+		<pre><a>http://git.kiwifarms.net/wolfree</a></pre>
+		<pre><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion/wolfree</a></pre>
+		<pre><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion.ws/wolfree</a></pre>
+		<pre><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion.pet/wolfree</a></pre>
+		<pre><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.tor2web.to/wolfree</a></pre>
+		<pre><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.tor2web.xyz/wolfree</a></pre>
+		This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+		This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+		<h2> Live Help </h2>
+		Click the bluish “<b>JOIN CHAT</b>” button below.
+		Live help is offered via a public Internet Relay Chat (IRC) channel.
+		This channel is not private or one-on-one.
+		Joining the help channel may disclose your IP address to other Users.
+		<h4>
+			<a href="http://web.libera.chat/?nick=anonymous??#%23wolfree2022" class="button">
+				&nbsp; JOIN CHAT &nbsp;
+			</a>
+		</h4>
+		If you have a common question, it is probably already answered in the Frequently Asked Questions (FAQ) sections below.
+		Help is provided by volunteers, so it might take a few minutes before someone replies to your question.
+		If you do not get a reply before you need to leave, consider asking your question on the Fediverse:
+		<a href="http://kiwifarms.cc/wolfree">@wolfree@kiwifarms.cc</a>
+		<h2> Overview </h2>
+		WolfreeAlpha <i><small>(the “Wolfree Websites” or the “Service”)</small></i> is part of the Wolfree Project.
+		The programmers developing the Service <i><small>(the “Wolfree Developers” or the “Developers”)</small></i> use <a href="http://products.wolframalpha.com/api/documentation">Wolfram|Alpha Full Results API</a> to access complete step-by-step solutions.
+		The Developers' use of Wolfram|Alpha Full Results API is subject to the <a href="http://products.wolframalpha.com/api/termsofuse.html">Wolfram|Alpha API Terms of Use</a>.
+		The Developers host this Service to share step-by-step solutions with you <i><small>(the “Wolfree Users” or the “Users”)</small></i> for free.
+		<h2> Notice </h2>
+		<h3> Distributing the output of algorithms </h3>
+		Like <a href="https://en.wikipedia.org/wiki/GitHub_Copilot">GitHub Copilot</a>, <a href="https://en.wikipedia.org/wiki/Project_Jupyter">Jupyter Notebook</a>, and <a href="https://en.wikipedia.org/wiki/Google_Search">Google Search</a>, the Wolfree Project is also <a href="http://wikipedia.org/wiki/Software_as_a_service">software as a service</a> (SaaS).
+		The Wolfree Project may distribute mathematical expressions, step-by-step solutions, or other disputed contents.
+		Publication of information found in the Wolfree Project may violate the laws in the country or jurisdiction from where you are viewing this information.
+		<h3> No guarantee of validity </h3>
+		Please be advised that nothing found here has necessarily been reviewed by people with the expertise required to provide you with complete, accurate, or reliable information.
+		The Wolfree Project cannot guarantee the validity of the information found here.
+		Note that most other encyclopedias and reference works also have <a href="http://wikipedia.org/wiki/Wikipedia:Non-Wikipedia_disclaimers">disclaimers</a>.
+		<h3> No legal opinion </h3>
+		There may be legal, medical, mathematics, or other information that is also the subject of professional opinions; the Wolfree Project is not a substitute for seeking the help of a professional.
+		If you need specific advice, please seek a professional who is licensed or knowledgeable in that area.
+		The Wolfree Project does not give legal advice, medical advice, or mathematics advice.
+		<h2> FAQ: exceptions to copyright</h2>
+		The exceptions to copyright allow limited use of copyright works without permission from the copyright owner.
+		Users can skip this section if these exceptions cover them.
+		In most jurisdictions, you can browse the Wolfree Websites when the use is non-commercial research or private study, though you must be genuinely studying like you would if you took a college course.
+		<h3> Will I get in trouble with my Internet provider (ISP) or copyright lawyers if I read the mathematical expressions on the Wolfree Websites? </h3>
+		No case exists of someone being sued for consuming a copyrighted book, song, or movie from a website.
+		Reading the mathematical expressions on the Wolfree Websites is not <a href="http://wikipedia.org/wiki/File_sharing">filesharing</a> (P2P), so copyright holders can not find out who is visiting WolfreeAlpha, and they would not care if they knew.
+		The Wolfree Developers are the real targets of the (unsuccessful) lawsuits because the Developers are the ones distributing step-by-step solutions, not the Users.
+		Thousands of students and scientists around the world safely visit WolfreeAlpha every day, so you are in good company.
+		<h3> Why are legal threats targeting the Developers and not the Users? </h3>
+		The reason is that the Developers set up web servers that facilitate the unauthorized distribution of step-by-step solutions.
+		In comparison, the Users only read the solutions and do not re-share them.
+		Copyright does not protect ideas, nor does it protect facts.
+		It protects only the form in which ideas or facts are expressed.
+		For example, you may read a copyrighted step-by-step solution and appropriate the ideas or facts it conveys into your work without violating the copyright.
+		However, you may not reproduce the actual text of the step-by-step solution (unless <a href="http://wikipedia.org/wiki/Fair_use">fair use</a> or another <a href="https://en.wikipedia.org/wiki/Limitations_and_exceptions_to_copyright">exception to copyright</a> protection applies), nor may you evade this prohibition simply by changing some words or thoroughly <a href="https://wikipedia.org/wiki/Paraphrasing_of_copyrighted_material">paraphrasing</a> the content.
+		<h3> Can I share screenshots of these mathematical expressions online? </h3>
+		Reading these mathematical expressions for personal use falls into the categories of either <a href="http://wikipedia.org/wiki/Idea%E2%80%93expression_distinction">idea-expression distinction</a> or <a href="http://wikipedia.org/wiki/Fair_dealing">fair dealing</a>.
+		But public distribution – by uploading or otherwise offering to share copyright-protected content – remains illegal in most, if not all, countries.
+		Reading the step-by-step solutions on the Wolfree Websites is safe in most jurisdictions worldwide that respect freedom.
+		However, do not share screenshots of these mathematical expressions online as this may constitute copyright infringement.
+		<h3> Can I use my browser to display these mathematical expressions on the Internet during my math lectures? </h3>
+		Several exceptions allow the use of copyright works for educational purposes, such as performing, playing, or showing copyright works in universities or other educational establishments.
+		However, it only applies if the audience is limited to teachers, pupils, and others directly connected with the activities of the establishment.
+		Examples of this are showing a mathematical expression for calculus lessons and the teaching of math.
+		<h2> FAQ: the Wolfree ecosystem </h2>
+		The Wolfree Project aims to integrate interactive and programmatic access to the full power of the <a href="http://wolframalpha.com/tour">WolframAlpha computational knowledge engine</a>.
+		The Wolfree Project leverages the <a href="http://wolfram.com/language/index.php.en">Wolfram Language</a> to allow free-form linguistic input of computations and programs.
+		The Wolfree Project brings extensive data and computation capabilities that rely on the <a href="http://wolfram.com/knowledgebase/index.html.en">Wolfram knowledgebase</a> and curated data.
+		<h3> How do I contact the Wolfree Developers? </h3>
+		The Developers check email twice a year.
+		Use the Fediverse to send urgent messages.
+		Publicly reply to pinned posts on the Fediverse to get a quicker response from the community.
+		<br>
+		Fediverse: <a href="http://kiwifarms.cc/wolfree">@wolfree@kiwifarms.cc</a>
+		<br>
+		Email: hb4lhgu0h@mozmail.com
+		<h3> How do I contact the Wolfree Developers on the Fediverse? </h3>
+		<ol>
+			<li> Choose a Fediverse instance, e.g., <br> Soapbox Pub, Pleroma Social, Misskey, or Mastodon. </li>
+			<li> Create an account and sign in. </li>
+			<li> Send your message to the Developers' inbox. </li>
+		</ol>
+		<h3> How do I contact the Wolfree Developers by Email? </h3>
+		<ol>
+			<li> Choose an Email service provider, e.g., <br> ProtonMail, Disroot, Tutanota, or Gmail. </li>
+			<li> Create an account and sign in. </li>
+			<li> Send your message to the Developers' inbox. </li>
+		</ol>
+		<h3> Why do the Wolfree Developers prefer federated social networks? </h3>
+		Everybody knows that you do not have to use the same email provider to communicate via email.
+		You can send a mail from @protonmail.com to @gmail.com and the other way around.
+		The federation on the Fediverse works in the same way.
+		It means that different or decentralized servers or instances can communicate with each other via a protocol.
+		Like email uses POP, IMAP, or SMTP protocols for federation, the Fediverse uses ActivityPub.
+		See also:
+		<pre><a>http://joinfediverse.wiki</a></pre>
+		<pre><a>http://fediverse.space</a></pre>
+		<pre><a>http://soapbox.pub/about</a></pre>
+		<pre><a>http://docs.joinmastodon.org</a></pre>
+		<pre><a>http://docs-develop.pleroma.social/frontend</a></pre>
+		<pre><a>http://misskey-hub.net</a></pre>
+		<h3> Why do the Wolfree Developers prefer copyleft licenses? </h3>
+		Copyleft licenses work like permissive licenses with a catch: they require sharing and licensing the source code for new software built with copyleft-licensed software as open software, too.
+		For this reason, copyleft licenses are also “share-alike” licenses, though “copyleft” is the term you will hear most in software.
+		See also:
+		<pre><a>http://blueoakcouncil.org/primer</a></pre>
+		<pre><a>http://lukesmith.xyz/articles/why-i-use-the-gpl-and-not-cuck-licenses</a></pre>
+		<pre><a>http://gnu.org/philosophy/free-software-even-more-important.en.html</a></pre>
+		<h2> FAQ: freedom of information </h2>
+		<a href="http://wikipedia.org/wiki/Freedom_of_information">Freedom of information</a> is the freedom of people to publish and consume information.
+		Access to information is the ability of an individual to seek, receive and impart information effectively.
+		<a href="http://wikipedia.org/wiki/Intellectual_freedom">Intellectual freedom</a> encompasses the freedom to hold, receive, and disseminate ideas without restriction.
+		The extent of <a href="http://wikipedia.org/wiki/Internet_censorship">Internet censorship</a> varies on a country-to-country basis.
+		Most countries enforce minimal Internet censorship.
+		Users in these countries can skip this section.
+		<h3> How do I get around Internet filtering? </h3>
+		<ul>
+			<li>
+				Enable <a href="http://privacyguides.org/dns">DoH</a>,
+				e.g., <a href="http://developers.cloudflare.com/1.1.1.1/encrypted-dns/dns-over-https/encrypted-dns-browsers">1.1.1.1</a>.
+			</li>
+			<li>
+				Install <a href="http://privacyguides.org/vpn">a free VPN</a>,
+				e.g., <a href="http://protonvpn.com">ProtonVPN</a>.
+			</li>
+			<li>
+				Download <a href="http://privacyguides.org/browsers">a browser that circumvents censorship</a>, <br>
+				e.g., <a href="http://torproject.org">Tor Browser</a>.
+			</li>
+		</ul>
+		Unless you are an information security expert, do not use DoH, VPN, and Tor at the same time.
+		Pick only one of them.
+		If unsure, learn how to use Tor safely.
+		<h3> Should I use DoH, VPN, or Tor? </h3>
+		DoH will not help you hide any of your browsing activity and should only be used to get around basic DNS blocking when you can be sure there will not be any consequences.
+		Using a VPN will not keep your browsing habits anonymous or add additional security to non-secure (HTTP) traffic.
+		In locations where there is Internet filtering (or censorship), visiting forbidden resources may have consequences that you should consider in your <a href="http://privacyguides.org/basics/threat-modeling">threat model</a>.
+		The Wolfree Developers do not suggest the use of DoH or VPN for this purpose.
+		Use Tor instead.
+		<h3> Do I need to use Tor to access WolfreeAlpha? </h3>
+		Unless you live in a country without intellectual freedom, where reading certain mathematical expressions is banned, you do not need to use Tor.
+		But if you can not access WolfreeAlpha because your country blocks it, Tor will unlock access.
+		<h3> Should I use Tor to browse WolfreeAlpha? </h3>
+		If reading the mathematical expressions on the Wolfree Websites is legal in your jurisdiction, you do not need to use Tor.
+		If unsure, learn how to use Tor safely.
+		<h3> What if my government made the use of Tor a felony? </h3>
+		This level of intellectual freedom is too much for your jurisdiction.
+		For your safety, avoid using Tor if it is illegal where you live.
+		Most Users value their freedom of movement more than their freedom to read.
+		<h2> Acknowledgment </h2>
+		The following organizations are not directly involved in producing WolfreeAlpha but may have contributed conceptual inspiration or criticism.
+		They maintain software or set up web services that indirectly benefit WolfreeAlpha.
+		This list is incomplete and excludes organizations with weak legal expertise to reduce their exposure to lawsuits.
+		<ul>
+			<li> <code><a>http://fsf.org</a></code> promotes <a href="http://gnu.org/philosophy/free-sw.html.en">libre software</a>. </li>
+			<li> <code><a>http://freeread.org</a></code> promotes <a href="http://wikipedia.org/wiki/Shadow_library">shadow libraries</a>. </li>
+			<li> <code><a>http://privacyguides.org</a></code> promotes data security and privacy. </li>
+		</ul>
+		<h3> The Fediverse </h3>
+		The <a href="http://joinfediverse.wiki">Fediverse</a> is a giant network of social media platforms.
+		There are microblogging, blogging, photo-blogging, and video-hosting platforms, and they are all interconnected.
+		So you only need one account to follow anyone on any compatible social media platform.
+		Follow the Wolfree Project on the Fediverse: <a href="http://kiwifarms.cc/wolfree">@wolfree@kiwifarms.cc</a>
+		<ul>
+			<li> <code><a>http://fediverse.space</a></code> visualizes networks on the Fediverse. </li>
+			<li> <code><a>http://pleroma.social</a></code> develops Pleroma and its front-end. </li>
+			<li> <code><a>http://soapbox.pub</a></code> is another Pleroma front-end. </li>
+			<li> <code><a href="http://kiwifarms.cc/main/all">http://kiwifarms.cc</a></code> hosts a Pleroma instance. </li>
+			<li> <code><a href="http://poa.st/timeline/fediverse">http://poa.st</a></code> hosts another Pleroma instance. </li>
+		</ul>
+		<h3> Gitea </h3>
+		<a href="http://wikipedia.org/wiki/Gitea">Gitea</a> is a community-managed lightweight code hosting solution, a <a href="http://wikipedia.org/wiki/Forge_(software)">forge</a> software package for software development <a href="http://wikipedia.org/wiki/Version_control">version control</a> using <a href="http://wikipedia.org/wiki/Git">Git</a> and other collaborative features like <a href="http://wikipedia.org/wiki/Bug_tracking_system">bug tracking</a>, <a href="http://wikipedia.org/wiki/Code_review">code review</a>, and wikis.
+		<ul>
+			<li> <code><a>http://gitea.io</a></code> develops a self-hosted Git service. </li>
+			<li> <code><a>http://git.kiwifarms.net</a></code> hosts a Git server. </li>
+		</ul>
+		<h3> Sci-Hub </h3>
+		<a href="http://wikipedia.org/wiki/Sci-Hub">Sci-Hub</a> is a shadow library website that provides free access to millions of research papers and books.
+		<ul>
+			<li> <code><a>http://sci-hub.se</a></code> </li>
+			<li> <code><a>http://sci-hub.st</a></code> </li>
+			<li> <code><a>http://sci-hub.ru</a></code> </li>
+		</ul>
+		<h3> Libgen </h3>
+		<a href="http://wikipedia.org/wiki/Library_Genesis">Library Genesis</a> (Libgen) is a shadow library website for scholarly journal articles, academic and general-interest books, audiobooks, and magazines.
+		<ul>
+			<li> <code><a>http://libgen.fun</a></code> </li>
+			<li> <code><a>http://library.lol</a></code> </li>
+			<li> <code><a>http://libgen.rocks</a></code> </li>
+		</ul>
 	</main>
 	<script>
 		document.querySelectorAll`a:not([href])`.forEach(
 			element => element.href = element.innerText
 		)
 	</script>
+</body>
+</html>
