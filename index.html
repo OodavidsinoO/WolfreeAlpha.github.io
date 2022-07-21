@@ -9,10 +9,17 @@
 			font-family: system-ui;
 			line-height: 2.5;
 		}
+		nav > details > summary {
+			display: inline;
+			font-size: 300%;
+			cursor: pointer;
+			line-height: 1.5;
+			font-weight: bold;
+		}
 		header {
 			text-align: center;
 		}
-		h1 {
+		header > h1 {
 			margin: 0;
 			font-size: 300%;
 			font-weight: normal;
@@ -36,8 +43,17 @@
 	</style>
 </head>
 <body>
+	<nav>
+		<details>
+			<summary>
+				<span>
+					&nbsp; ≡ &nbsp;
+				</span>
+			</summary>
+			<ol data-table-of-contents> </ol>
+		</details>
+	</nav>
 	<header>
-		<br>
 		<h1> <a href="input/index.html">WolfreeAlpha</a> </h1>
 		<small>
 			Get FREE access to Wolfram|Alpha Pro. <br>
@@ -52,7 +68,6 @@
 		<br>
 	</header>
 	<main>
-		<ul class="table-of-contents"></ul>
 		<h2> Quickstart Guide </h2>
 		Take the mathematical problem <b contenteditable>x2y'=x2-y2</b> for example.
 		<ol>
@@ -65,7 +80,7 @@
 				Notice that an orangish single-line text field appears.
 			</li>
 			<li>
-				Click the text field and enter your mathematical problem.
+				Enter your mathematical problem in the text field.
 				Type <b contenteditable>x2y'=x2-y2</b> for example.
 			</li>
 			<li>
@@ -77,7 +92,7 @@
 		Bookmark the following Gitea repositories and web applications just in case this server goes down.
 		<h3> Web App </h3>
 		If your country has blocked access to all mirrors, download the <a href="https://www.torproject.org/">Tor Browser</a> to circumvent censorship.
-		<ul>
+		<ol>
 			<li><code><a>https://wolfreealpha.onrender.com/</a></code></li>
 			<li><code><a>https://wolfreealpha.on.fleek.co/</a></code></li>
 			<li><code><a>https://wolfreealpha.netlify.app/</a></code></li>
@@ -91,20 +106,28 @@
 			<li><code><a>https://wolfree.glitch.me/</a></code></li>
 			<li><code><a>https://wolfree.gitlab.io/</a></code></li>
 			<li><code><a>https://wolfree.pages.dev/</a></code></li>
-		</ul>
+		</ol>
 		<h3> Source Code </h3>
 		The Wolfree Developers may make important announcements in the following Gitea repositories.
 		SPDX-License-Identifier: AGPL-3.0-or-later
-		<ul>
+		<ol>
 			<li><code><a>https://git.kiwifarms.net/wolfree</a></code></li>
 			<li><code><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion/wolfree</a></code></li>
 			<li><code><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion.ws/wolfree</a></code></li>
 			<li><code><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion.pet/wolfree</a></code></li>
 			<li><code><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.tor2web.to/wolfree</a></code></li>
 			<li><code><a>http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.tor2web.xyz/wolfree</a></code></li>
-		</ul>
+		</ol>
 		This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 		This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+		<h2> Contact </h2>
+		The Developers check email twice a year.
+		Use the Fediverse to send urgent messages.
+		Publicly reply to pinned posts on the Fediverse to get a quicker response from the community.
+		<br>
+		Fediverse: <a href="https://kiwifarms.cc/wolfree">@wolfree@kiwifarms.cc</a>
+		<br>
+		Email: hb4lhgu0h@mozmail.com
 		<h2> Live Help </h2>
 		Click the bluish “<b>JOIN CHAT</b>” button below.
 		Live help is offered via a public Internet Relay Chat (IRC) channel.
@@ -126,7 +149,7 @@
 		The programmers developing the Service <i><small>(the “Wolfree Developers” or the “Developers”)</small></i> use <a href="https://products.wolframalpha.com/api/documentation/">Wolfram|Alpha Full Results API</a> to access complete step-by-step solutions.
 		The Developers' use of Wolfram|Alpha Full Results API is subject to the <a href="https://products.wolframalpha.com/api/termsofuse.html">Wolfram|Alpha API Terms of Use</a>.
 		The Developers host this Service to share step-by-step solutions with you <i><small>(the “Wolfree Users” or the “Users”)</small></i> for free.
-		<h2> Notice </h2>
+		<h2> Caution Notice </h2>
 		<h3> Distributing the output of algorithms </h3>
 		Like <a href="https://en.wikipedia.org/wiki/GitHub_Copilot">GitHub Copilot</a>, <a href="https://en.wikipedia.org/wiki/Project_Jupyter">Jupyter Notebook</a>, and <a href="https://en.wikipedia.org/wiki/Google_Search">Google Search</a>, the Wolfree Project is also <a href="https://en.wikipedia.org/wiki/Software_as_a_service">software as a service</a> (SaaS).
 		The Wolfree Project may distribute mathematical expressions, step-by-step solutions, the output of scientific calculators, or other disputed contents.
@@ -185,7 +208,7 @@
 		<h3> How do I take down a website for copyright infringement? </h3>
 		The Copyright Act allows copyright owners to sue infringers, which can be expensive and time-consuming.
 		The DMCA notice and takedown process is much cheaper and takes less time.
-		If the mathematical expressions being output by scientific calculators infringe your copyright, the Wolfree Developers encourage you to seek resolution through the DMCA notice and takedown process.
+		If the mathematical expressions being output by the scientific calculator infringe your copyright, the Wolfree Developers encourage you to seek resolution through the DMCA notice and takedown process.
 		Some success stories of the DMCA notice and takedown process are:
 		<ul>
 			<li><code><a>https://github.com/github/dmca/blob/master/2021/08/2021-08-11-wolfram.md</a></code></li>
@@ -207,25 +230,19 @@
 		The Wolfree Project aims to integrate interactive and programmatic access to the full power of the <a href="https://www.wolframalpha.com/tour">WolframAlpha computational knowledge engine</a>.
 		The Wolfree Project leverages the <a href="https://www.wolfram.com/language/index.php.en">Wolfram Language</a> to allow free-form linguistic input of computations and programs.
 		The Wolfree Project brings extensive data and computation capabilities that rely on the <a href="https://www.wolfram.com/knowledgebase/index.html.en">Wolfram knowledgebase</a> and curated data.
-		<h3> How do I contact the Wolfree Developers? </h3>
-		The Developers check email twice a year.
-		Use the Fediverse to send urgent messages.
-		Publicly reply to pinned posts on the Fediverse to get a quicker response from the community.
-		<br>
-		Fediverse: <a href="https://kiwifarms.cc/wolfree">@wolfree@kiwifarms.cc</a>
-		<br>
-		Email: hb4lhgu0h@mozmail.com
 		<h3> How do I contact the Wolfree Developers on the Fediverse? </h3>
+		Publicly reply to pinned posts on the Fediverse to get a quicker response from the community.
 		<ol>
 			<li>Choose a Fediverse instance, e.g.,<br><a href="https://soapbox.pub/soapbox-portfolio/">Soapbox Pub</a>, <a href="https://pleroma.social/#featured-instances">Pleroma Social</a>, <a href="https://join.misskey.page/en-US/instances">Misskey</a>, or <a href="https://joinmastodon.org/communities">Mastodon</a>.</li>
 			<li>Create an account and sign in.</li>
-			<li>Send your message to the Developers' inbox.</li>
+			<li>Send your message to the Developers' inbox: <br> <a href="https://kiwifarms.cc/wolfree">@wolfree@kiwifarms.cc</a></li>
 		</ol>
-		<h3> How do I contact the Wolfree Developers by Email? </h3>
+		<h3> How do I contact the Wolfree Developers by email? </h3>
+		The Developers check email twice a year.
 		<ol>
-			<li> Choose an Email service provider, e.g., <br> ProtonMail, Disroot, Tutanota, or Gmail. </li>
-			<li> Create an account and sign in. </li>
-			<li> Send your message to the Developers' inbox. </li>
+			<li> Choose an email service provider, e.g., <br> ProtonMail, Disroot, Tutanota, or Gmail.</li>
+			<li> Create an account and sign in.</li>
+			<li> Send your message to the Developers' inbox: <br> hb4lhgu0h@mozmail.com</li>
 		</ol>
 		<h3> Why do the Wolfree Developers prefer federated social networks? </h3>
 		Everybody knows that you do not have to use the same email provider to communicate via email.
@@ -301,13 +318,14 @@
 			<li><code><a>https://freeread.org/</a></code> promotes <a href="https://en.wikipedia.org/wiki/Shadow_library">shadow libraries</a>.</li>
 			<li><code><a>https://www.privacyguides.org/</a></code> promotes data security and privacy.</li>
 		</ul>
-		<h3> The Fediverse </h3>
-		The <a href="https://joinfediverse.wiki/">Fediverse</a> is a giant network of social media platforms.
+		<h3> Fediverse </h3>
+		The <a href="https://en.wikipedia.org/wiki/Fediverse">Fediverse</a> is a giant network of social media platforms.
 		There are microblogging, blogging, photo-blogging, and video-hosting platforms, and they are all interconnected.
 		So you only need one account to follow anyone on any compatible social media platform.
 		Follow the Wolfree Project on the Fediverse: <a href="https://kiwifarms.cc/wolfree">@wolfree@kiwifarms.cc</a>
 		<ul>
 			<li><code><a>https://fediverse.space/</a></code> visualizes networks on the Fediverse.</li>
+			<li><code><a>https://joinfediverse.wiki/</a></code> is an encyclopedia dedicated to the Fediverse.</li>
 			<li><code><a>https://pleroma.social/</a></code> develops Pleroma and its front-end.</li>
 			<li><code><a>https://soapbox.pub/</a></code> is another Pleroma front-end.</li>
 			<li><code><a href="https://kiwifarms.cc/main/all">https://kiwifarms.cc/</a></code> hosts a Pleroma instance.</li>
@@ -328,17 +346,39 @@
 			<li><code><a>https://sci-hub.st/</a></code></li>
 			<li><code><a>https://sci-hub.ru/</a></code></li>
 		</ul>
-		<h3> Libgen </h3>
+		<h3> Library Genesis </h3>
 		<a href="https://en.wikipedia.org/wiki/Library_Genesis">Library Genesis</a> (Libgen) is a shadow library website for scholarly journal articles, academic and general-interest books, audiobooks, and magazines.
 		<ul>
 			<li><code><a>http://libgen.fun/</a></code></li>
 			<li><code><a>http://library.lol/</a></code></li>
 			<li><code><a>http://libgen.rocks/</a></code></li>
 		</ul>
+		<h3> Internet Archive </h3>
+		The <a href="https://en.wikipedia.org/wiki/Internet_Archive">Internet Archive</a> is a non-profit library that lends digital copies of books.
+		Penguin Random House, HarperCollins, Hachette, and Wiley claim the Internet Archive is infringing copyright by lending digital books.
+		<ul>
+			<li><code><a>https://www.eff.org/cases/hachette-v-internet-archive</a></code></li>
+			<li><code><a>https://www.eff.org/press/releases/internet-archive-seeks-summary-judgment-federal-lawsuit-filed-publishing-companies</a></code></li>
+		</ul>
 	</main>
 	<script>
 		document.querySelectorAll`a:not([href])`.forEach(
 			element => element.href = element.innerText
+		)
+		document.querySelectorAll`h2, h3, h4`.forEach(
+			element => {
+				element.setAttribute('id', element.innerText.replaceAll(' ', '-'))
+				document.querySelector`[data-table-of-contents]`.insertAdjacentHTML(
+					'beforeend',
+					`
+						<li>
+							<a href=#${element.getAttribute('id')}>
+								${element.innerText}
+							</a>
+						</li>
+					`
+				)
+			}
 		)
 	</script>
 </body>
