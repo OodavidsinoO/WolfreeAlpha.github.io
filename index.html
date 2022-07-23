@@ -3,38 +3,44 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
+	<meta name="description" content="Wolfree unlocks FREE access to Wolfram|Alpha APIs. WolfreeAlpha shares step-by-step solutions with everyone.">
 	<title> WolfreeAlpha: FREE Wolfram|Alpha Step-by-Step Solution </title>
 	<style>
 		body {
 			font-family: system-ui;
 			line-height: 2.5;
 		}
-		nav > details > summary {
+		summary {
 			display: inline;
-			font-size: 300%;
+			font-size: xx-large;
 			cursor: pointer;
-			line-height: 1.5;
+			line-height: 2;
 			font-weight: bold;
-		}
-		header {
-			text-align: center;
-		}
-		header > h1 {
-			margin: 0;
-			font-size: 300%;
-			font-weight: normal;
 		}
 		main {
 			margin: auto;
 			max-width: 40em;
 		}
-		.button {
+		header {
+			padding: 9%;
+		}
+		[data-white-space-nowrap] {
+			white-space: nowrap;
+		}
+		[data-button] {
 			font-weight: bold;
+			padding: 10px;
+			white-space: nowrap;
+    		line-height: 4em;
+			border-radius: 5px;
+			border: none;
+		}
+		[data-text-button] {
+			color: #6200ee;
+		}
+		[data-contained-button] {
 			color: white;
 			background-color: #6200ee;
-			border-radius: 5px;
-			padding: 10px;
-			border: none;
 			box-shadow: 1px 2px 9px -4px black;
 		}
 		a {
@@ -53,21 +59,21 @@
 			<ol data-table-of-contents> </ol>
 		</details>
 	</nav>
-	<header>
-		<h1> <a href="input/index.html">WolfreeAlpha</a> </h1>
-		<small>
-			Get FREE access to Wolfram|Alpha Pro. <br>
-			Unlock step-by-step solutions for everyone.
-		</small>
-		<br>
-		<br>
-		<a href="input/index.html" class="button">
-			&nbsp; GET STARTED &nbsp;
-		</a>
-		<br>
-		<br>
-	</header>
 	<main>
+		<header>
+			<h1>Wol<a href="input/index.html">free</a>Alpha</h1>
+			Unlock FREE access to <span data-white-space-nowrap>Wolfram|Alpha APIs.</span>
+			<br>
+			Share step-by-step solutions <span data-white-space-nowrap>with everyone.</span>
+			<br> <br>
+			<a href="input/index.html" data-button data-contained-button>
+				&nbsp; GET STARTED &nbsp;
+			</a>
+			<a href="#Quickstart-Guide" data-button data-text-button>
+				&nbsp; LEARN MORE &nbsp;
+			</a>
+			<br> <br> <br>
+		</header>
 		<h2> Quickstart Guide </h2>
 		Take the mathematical problem <b contenteditable>x2y'=x2-y2</b> for example.
 		<ol>
@@ -135,7 +141,7 @@
 		Joining the help channel may disclose your IP address to other Users.
 		<br>
 		<br>
-		<a href="https://web.libera.chat/?nick=anonymous??#%23wolfree2022" class="button">
+		<a href="https://web.libera.chat/?nick=anonymous??#%23wolfree2022" data-button data-contained-button>
 			&nbsp; JOIN CHAT &nbsp;
 		</a>
 		<br>
