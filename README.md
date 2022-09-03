@@ -1,13 +1,14 @@
 
-All files in this directory are output from wolfree.sh.
+All the files in this directory are created automatically using Docker.
 
-Running wolfree.sh should automatically generate all the files in this directory.
+Docker can read wolfree-dockerfile to produce all the files in this directory.
 
-The source code for wolfree.sh is available on the Gitea server:
+You can get Docker at
+https://www.docker.com/
 
+You can get wolfree-dockerfile at
 https://git.kiwifarms.net/wolfree
 
-Alternatively, use the Tor Browser to access the hidden Gitea service:
-
+You can also use Tor to get wolfree-dockerfile at
 http://it7otdanqu7ktntxzm427cba6i53w6wlanlh23v5i3siqmos47pzhvyd.onion/wolfree
 
