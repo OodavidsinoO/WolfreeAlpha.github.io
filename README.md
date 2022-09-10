@@ -3,11 +3,11 @@ All the files in this directory are created automatically using Docker and Docke
 
 Docker can read Dockerfile to produce all the files in this directory.
 
-You can get Docker from the following website.
+You can get Docker from:
 
 https://docs.docker.com/
 
-You can get Dockerfile from the following Gitea servers.
+You can get Dockerfile from:
 
 https://git.disroot.org/wolfree
 

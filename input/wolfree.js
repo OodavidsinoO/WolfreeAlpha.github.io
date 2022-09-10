@@ -12,19 +12,20 @@ const wolfree = {
 					wolfree.input = t.current.value
 					wolfree.i2d   = t.current.i2d ? 'true' : ''
 				}
-				setTimeout(wolfree.updateDOM)
-				setTimeout(wolfree.updateURL)
+				setTimeout(wolfree.entrypoint)
 			}
 		}
 	},
-	updateURL: () => {
-		const windowURL = new URL(location)
-		windowURL.searchParams.set('wolfree_input',    wolfree.input)
-		windowURL.searchParams.set('wolfree_i2d',      wolfree.i2d)
-		windowURL.searchParams.set('wolfree_podstate', wolfree.podstate)
-		history.pushState(null, '', windowURL)
-	},
-	updateDOM: async () => {
+	entrypoint: async () => {
+		setTimeout(
+			() => {
+				const windowURL = new URL(location)
+				windowURL.searchParams.set('wolfree_input',    wolfree.input)
+				windowURL.searchParams.set('wolfree_i2d',      wolfree.i2d)
+				windowURL.searchParams.set('wolfree_podstate', wolfree.podstate)
+				history.pushState(null, '', windowURL)
+			}
+		)
 		setTimeout( // show the skeleton components
 			() => document.querySelector`
 				#__next > div > div._1MeJ._3eup > main > div._3BQG > div,
@@ -70,20 +71,10 @@ const wolfree = {
 			'893Q95-3PJW2QP6AY',
 			'AAL48A-2X7Q4K59GU',
 		]
-		const corsURLArray = [
-			'https://072c5402-f7ff-47b0-b84d-12bc32fddc9b.cyclic.app/',
-			'https://c0d679b8-1b5f-4cb4-8fd7-925eaed04c0a.cyclic.app/',
-			'https://99419715-93d7-4571-965d-ebf2bd1f4a53.cyclic.app/',
-			'https://c0823ed3-1c21-4724-a5df-86c4fb1b8a03.cyclic.app/',
-			'https://006ff44a-44ac-43cb-add2-50ebd29ed62e.cyclic.app/',
-			'https://46bfded1-1f2a-4dea-8355-5eb6365681cf.cyclic.app/',
+		const appID = appIDArray[
+			self.crypto.getRandomValues(new Uint32Array(1)) % appIDArray.length
 		]
-		const newUint32Array1 = new Uint32Array(1)
-		self.crypto.getRandomValues(newUint32Array1)
-		const appID = appIDArray[newUint32Array1 % appIDArray.length]
-		self.crypto.getRandomValues(newUint32Array1)
-		const corsURL = corsURLArray[newUint32Array1 % corsURLArray.length]
-		const apiURL = new URL('api.wolframalpha.com/v2/query', corsURL)
+		const apiURL = new URL('https://api.wolframalpha.com/v2/query')
 		apiURL.searchParams.append('output', 'json')
 		apiURL.searchParams.append('scantimeout', 30)
 		apiURL.searchParams.append('podtimeout', 30)
@@ -97,125 +88,130 @@ const wolfree = {
 		wolfree.input    && apiURL.searchParams.append('input', wolfree.input)
 		wolfree.i2d      && apiURL.searchParams.append('i2d', wolfree.i2d)
 		wolfree.podstate && apiURL.searchParams.append('podstate', wolfree.podstate)
-		const queryresult = (await (await fetch(apiURL)).json()).queryresult
-		document.querySelector`main`.insertAdjacentHTML(
-			'afterend', `
-				<div
-					class=_3BQG
-					style=padding:0
-					data-wolfree-pods
-				>
-					<div class=_2ThP>
-						<div class=_pA1m>
-							<section class=_1vuO>
-								${
-									queryresult.pods ? queryresult.pods.map(
-										pod => `
-											<section class=_gtUC>
-												${
-													`
-														<header class=_2Qm3>
-															<h2 class=_3OwK>
-																${pod.title}
-															</h2>
-															${
-																pod.states?.map(
-																	state => state.states ? `
-																		<select
-																			style="
-																				background: white;
-																				border-radius: 4px;
-																				color: orangered;
-																				border: thin solid darkorange
-																			"
-																			onchange="
-																				wolfree.podstate = this.value
-																				wolfree.updateDOM()
-																				wolfree.updateURL()
-																			"
-																		>
-																			<option>
-																				${state.value}
-																			</option>
-																			${
-																				state.states.map(
-																					state => `
-																						<option>
-																							${state.name}
-																						</option>
-																					`
-																				).join``
-																			}
-																		</select>
-																	` : ''
-																).join('') || ''
-															}
-														</header>
-														<div class=_1brB> </div>
+		await jQuery.ajax(
+			{
+				url: apiURL,
+				dataType: 'jsonp',
+				success: response => document.querySelector`main`.insertAdjacentHTML(
+					'afterend',
+					`
+						<div
+							class=_3BQG
+							style=padding:0
+							data-wolfree-pods
+						>
+							<div class=_2ThP>
+								<div class=_pA1m>
+									<section class=_1vuO>
+										${
+											response.queryresult.pods?.map(
+												pod => `
+													<section class=_gtUC>
 														${
-															pod.subpods.map(
-																subpod => `
-																	<div
-																		class=_1brB
-																		style="
-																			font-family: monospace;
-																			overflow: auto;
-																		"
-																	>
-																		<div class=_3fR4>
-																			<img
-																				class=_3c8e
-																				style=width:auto
-																				src=${subpod.img.src}
+															`
+																<header class=_2Qm3>
+																	<h2 class=_3OwK>
+																		${pod.title}
+																	</h2>
+																	${
+																		pod.states?.map(
+																			state => state.states ? `
+																				<select
+																					style="
+																						background: white;
+																						border-radius: 4px;
+																						color: orangered;
+																						border: thin solid darkorange
+																					"
+																					onchange="
+																						wolfree.podstate = this.value
+																						setTimeout(wolfree.entrypoint)
+																					"
+																				>
+																					<option>
+																						${state.value}
+																					</option>
+																					${
+																						state.states.map(
+																							state => `
+																								<option>
+																									${state.name}
+																								</option>
+																							`
+																						).join``
+																					}
+																				</select>
+																			` : ''
+																		).join('') || ''
+																	}
+																</header>
+																<div class=_1brB> </div>
+																${
+																	pod.subpods.map(
+																		subpod => `
+																			<div
+																				class=_1brB
+																				style="
+																					font-family: monospace;
+																					overflow: auto;
+																				"
 																			>
-																			<details>
-																				<summary style=direction:rtl> </summary>
-																				<div contenteditable>
-																					<pre style=width:0>${subpod.plaintext}</pre>
+																				<div class=_3fR4>
+																					<img
+																						class=_3c8e
+																						style=width:auto
+																						src=${subpod.img.src}
+																					>
+																					<details>
+																						<summary style=direction:rtl> </summary>
+																						<div contenteditable>
+																							<pre style=width:0>${subpod.plaintext}</pre>
+																						</div>
+																						<br>
+																					</details>
 																				</div>
-																				<br>
-																			</details>
-																		</div>
-																	</div>
-																`
-															).join``
+																			</div>
+																		`
+																	).join``
+																}
+															`
 														}
-													`
-												}
-											</section>
-										`
-									).join`` : ''
-								}
-								<section class=_gtUC>
-									<header class=_2Qm3>
-										<h2 class=_3OwK>
-											Wolfree JavaScript variables
-										</h2>
-									</header>
-									<div
-										class=_1brB
-										style="
-											font-family: monospace;
-											overflow: auto;
-										"
-									>
-										<div class=_3fR4>
-											<details open>
-												<summary> </summary>
-												<br>
-												<div contenteditable>
-													<pre style=width:0>${JSON.stringify({wolfree, queryresult}, null, 4)}</pre>
+													</section>
+												`
+											).join('') || ''
+										}
+										<section class=_gtUC>
+											<header class=_2Qm3>
+												<h2 class=_3OwK>
+													Wolfree JavaScript variables
+												</h2>
+											</header>
+											<div
+												class=_1brB
+												style="
+													font-family: monospace;
+													overflow: auto;
+												"
+											>
+												<div class=_3fR4>
+													<details open>
+														<summary> </summary>
+														<br>
+														<div contenteditable>
+															<pre style=width:0>${JSON.stringify({wolfree, response}, null, 4)}</pre>
+														</div>
+														<br>
+													</details>
 												</div>
-												<br>
-											</details>
-										</div>
-									</div>
-								</section>
-							</section>
+											</div>
+										</section>
+									</section>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			`
+					`
+				),
+			}
 		)
 		setTimeout( // hide the skeleton components
 			() => document.querySelector`
