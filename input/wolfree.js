@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 'use strict'
 const wolfree = {
 	input:    new URLSearchParams(location.search).get`wolfree_input`    || '',
@@ -149,6 +151,15 @@ const wolfree = {
 																${
 																	pod.subpods.map(
 																		subpod => `
+																			<div class=_1brB>
+																				<div class=_3fR4>
+																					<img
+																						class=_3c8e
+																						style=width:auto
+																						src=${subpod.img.src}
+																					>
+																				</div>
+																			</div>
 																			<div
 																				class=_1brB
 																				style="
@@ -157,15 +168,10 @@ const wolfree = {
 																				"
 																			>
 																				<div class=_3fR4>
-																					<img
-																						class=_3c8e
-																						style=width:auto
-																						src=${subpod.img.src}
-																					>
 																					<details>
 																						<summary style=direction:rtl> </summary>
 																						<div contenteditable>
-																							<pre style=width:0>${subpod.plaintext}</pre>
+																							<pre>${subpod.plaintext}</pre>
 																						</div>
 																						<br>
 																					</details>
@@ -198,7 +204,7 @@ const wolfree = {
 														<summary> </summary>
 														<br>
 														<div contenteditable>
-															<pre style=width:0>${JSON.stringify({wolfree, response}, null, 4)}</pre>
+															<pre>${JSON.stringify({wolfree, response}, null, 4)}</pre>
 														</div>
 														<br>
 													</details>
